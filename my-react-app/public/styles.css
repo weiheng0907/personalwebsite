@@ -9,11 +9,10 @@ body {
 
 
 h1 {
-  font-weight: 900;
-  font-size: 500%;
   text-align: center;
   color: #fff;
   line-height: 1.2;
+  font-family: "Inter";
 }
 
 h1 span {

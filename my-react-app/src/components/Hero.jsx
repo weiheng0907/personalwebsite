@@ -1,6 +1,30 @@
 import React, { useEffect } from 'react';
+import Typed from 'typed.js'
+
 
 const Hero = () => {
+
+  const el = React.useRef(null);
+  const strings = ["Developer", "Software Engineer"]
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: strings.map(
+        item =>
+          `<span style='color: #42FD00; text-decoration: underline; text-decoration-color: #3BAC13;'>${item}</span>`,
+      ),
+      typeSpeed: 65,
+      backSpeed: 65,
+      cursorChar: '<span style="color: #;">|</span>',
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+
   useEffect(() => {
     // Initialising the canvas
     var canvas = document.getElementById('heroCanvas'),
@@ -45,11 +69,23 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" style={{ position: 'relative', width: '100%', height: '100vh' }}>
-      <canvas id="heroCanvas" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />
-      <h1 style={{ zIndex: 1, position: 'relative', textAlign: 'center', marginTop: '0%', top: '50%'}}>Welcome to my personal website</h1>
+    <section id="hero">
+      <canvas id="heroCanvas" />
+      <div className="hero-content"> 
+        <h1>Welcome to my website <br /> I'm Ooi Wei Heng</h1>
+        <p>I'm Into <span ref={el} /></p>
+        <div style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center'}}>
+          <a href="https://www.linkedin.com/in/weiheng0907/">
+            <img src="../assets/linkedin-icon.webp" alt="Linkedin" />
+          </a>
+          <a href="https://github.com/weiheng0907">
+            <img src="../assets/github-icon.jpg" alt="Github" />
+          </a>
+        </div>
+        <button style={{ border:'0', marginTop:'20px', padding:'10px 20px', fontSize:'18px', background: 'rgba(88, 217, 28, 0.5)'}}> <span  style={{ color:'white'}}>Explore</span></button>
+      </div>
     </section>
   );
-}
+}     
 
 export default Hero;
