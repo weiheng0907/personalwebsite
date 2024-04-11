@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 
-function Header () {
+function About() {
   const [activeSection, setActiveSection] = useState('hero');
 
   const handleButtonClick = (sectionId) => {
@@ -30,4 +30,4 @@ function Header () {
   );
 }
 
-export default Header;
+export default About;

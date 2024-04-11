@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Typed from 'typed.js'
 
 
-const Hero = () => {
+function Hero (){
 
   const el = React.useRef(null);
   const strings = ["Developer", "Software Engineer"]
