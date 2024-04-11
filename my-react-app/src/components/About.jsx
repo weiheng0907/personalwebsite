@@ -18,7 +18,7 @@ function About (){
                 <Grid xs={8} style={{color: 'white', display:'flex', justifyContent:"space-evenly", flexDirection:'column'}}>
                     <p style={{fontSize:'24px'}}>Ooi Wei Heng</p>
                     <p style={{fontSize:'20px'}}>
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                     </p>
                     <div style={{display:'grid', gridTemplateColumns: '2fr 2fr 2fr 2fr', gridTemplateRows: '4fr 4fr'}}>
                         <p style={{gridColumnStart: 'span 2'}}>Birthday: 07 September 2001</p>
