@@ -15,7 +15,7 @@ function About (){
                 <Grid xs={8} style={{display:'flex', justifyContent:'center'}} >
                 <img style={{ width:'250px', height:'350px'}}src='../assets/whpic.jpg' />
                 </Grid>
-                <Grid xs={8} style={{color: 'white'}}>
+                <Grid xs={8} style={{color: 'white', display:'flex', justifyContent:"space-evenly", flexDirection:'column'}}>
                     <p style={{fontSize:'24px'}}>Ooi Wei Heng</p>
                     <p style={{fontSize:'20px'}}>
                         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
