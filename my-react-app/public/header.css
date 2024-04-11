@@ -33,9 +33,9 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-  color: #ffc107; /* Change color on hover */
+  color: #ffc107; 
 }
 
 nav ul li.active button {
-  color: #ffc107; /* Change color of active button */
+  color: #ffc107; 
 }

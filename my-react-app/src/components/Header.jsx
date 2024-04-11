@@ -1,25 +1,29 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-
-function Header () {
+function Header() {
   const [activeSection, setActiveSection] = useState('hero');
 
   const handleButtonClick = (sectionId) => {
     setActiveSection(sectionId);
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const section = document.getElementById(activeSection);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }, [activeSection]);
 
   return (
     <header>
-      <nav>
+      <nav style={{ display: 'flex', justifyContent: 'center' }}>
         <ul>
           <li className={activeSection === 'about' ? 'active' : ''}>
             <button onClick={() => handleButtonClick('about')}>About</button>
           </li>
           <li className={activeSection === 'portfolio' ? 'active' : ''}>
             <button onClick={() => handleButtonClick('portfolio')}>Portfolio</button>
+          </li>
+          <li className={activeSection === 'skillset' ? 'active' : ''}>
+            <button onClick={() => handleButtonClick('skillset')}>Skillsets</button>
           </li>
           <li className={activeSection === 'contact' ? 'active' : ''}>
             <button onClick={() => handleButtonClick('contact')}>Contact</button>
