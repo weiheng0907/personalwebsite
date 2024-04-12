@@ -13,7 +13,7 @@ function About (){
             <Box sx={{ flexGrow: 0.5}}>
             <Grid container spacing={2} columns={16}>
                 <Grid xs={8} style={{display:'flex', justifyContent:'center'}} >
-                <img style={{ width:'250px', height:'350px'}}src='../assets/whpic.jpg' />
+                <img style={{ width:'250px', height:'350px'}} src='C:\Users\User\OneDrive\Desktop\Personal\Personal website\personalwebsite\my-react-app\src\assets\whpic.jpg' />
                 </Grid>
                 <Grid xs={8} style={{color: 'white', display:'flex', justifyContent:"space-evenly", flexDirection:'column'}}>
                     <p style={{fontSize:'24px'}}>Ooi Wei Heng</p>

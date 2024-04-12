@@ -3,7 +3,8 @@ import Header from './Header';
 import Hero from './Hero';
 import About from './About';
 import Portfolio from './Portfolio';
-
+import Work from './Work';
+import Skillset from './Skillset';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
+      <Work />
+      <Skillset />
     </div>
   );
 }

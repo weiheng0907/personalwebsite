@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 function Portfolio(){
@@ -9,7 +10,37 @@ function Portfolio(){
     return(
         <section id="portfolio">
             <h2 style={{display:'flex', textDecoration: 'underline', textDecorationColor: 'white', padding: '20px'}}>Education</h2>
-                <VerticalTimeline lineColor='black'>
+            <div style={{display:'flex', flexDirection:'column', justifyContent:'space-evenly'}}>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-md-3'>
+                        <h2>Education</h2>
+                        </div>
+                        <div class='col-md-9'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>
+                            <h3 class="vertical-timeline-element-title">Bachelor of Science with Honors in Computing Science</h3>
+                            <h4 class="vertical-timeline-element-subtitle">Coventry University(Singapore) October 2022 – March2024</h4>
+                            <p>Results: Waiting Final Result and Certification</p>
+                            </li>
+                            <li class='list-group-item'>
+                            <h3 class="vertical-timeline-element-title">Bachelor of Science with Honors in Computing Science</h3>
+                            <h4 class="vertical-timeline-element-subtitle">Coventry University(Singapore) October 2022 – March2024</h4>
+                            <p>Results: Waiting Final Result and Certification</p>
+                            </li>
+                            <li class='list-group-item'>
+                            <h3 class="vertical-timeline-element-title">Bachelor of Science with Honors in Computing Science</h3>
+                            <h4 class="vertical-timeline-element-subtitle">Coventry University(Singapore) October 2022 – March2024</h4>
+                            <p>Results: Waiting Final Result and Certification</p>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                {/* <VerticalTimeline lineColor='black'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         contentStyle={{ background: 'rgb(33, 150, 243)', color: 'black' }}
@@ -50,7 +81,11 @@ function Portfolio(){
                         
                         </p>
                     </VerticalTimelineElement>
-                </VerticalTimeline>
+                    <VerticalTimelineElement
+                        iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                        icon={<CloseIcon />}
+                    />
+                </VerticalTimeline> */}
         </section>
 
     );
