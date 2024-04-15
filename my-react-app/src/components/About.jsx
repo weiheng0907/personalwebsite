@@ -1,6 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
+import whpic from '../assets/whpic.jpg';
+
 
 
 
@@ -8,28 +10,25 @@ function About (){
    
 
     return (
-        <section id="about" style={{background:'darkgrey'}}>
-            <h2 style={{display:'flex', textDecoration: 'underline', textDecorationColor: 'white', padding: '20px'}}>About Me</h2>
-            <Box sx={{ flexGrow: 0.5}}>
-            <Grid container spacing={2} columns={16}>
-                <Grid xs={8} style={{display:'flex', justifyContent:'center'}} >
-                <img style={{ width:'250px', height:'350px'}} src='C:\Users\User\OneDrive\Desktop\Personal\Personal website\personalwebsite\my-react-app\src\assets\whpic.jpg' />
-                </Grid>
-                <Grid xs={8} style={{color: 'white', display:'flex', justifyContent:"space-evenly", flexDirection:'column'}}>
-                    <p style={{fontSize:'24px'}}>Ooi Wei Heng</p>
-                    <p style={{fontSize:'20px'}}>
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                    </p>
-                    <div style={{display:'grid', gridTemplateColumns: '2fr 2fr 2fr 2fr', gridTemplateRows: '4fr 4fr'}}>
-                        <p style={{gridColumnStart: 'span 2'}}>Birthday: 07 September 2001</p>
-                        <p style={{gridColumnStart: 'span 2'}}>Nationality: Malaysian</p>
-                        <p style={{gridColumnStart: 'span 2'}}>Phone Numbers: +65xxxxxxxx/+60187899958</p>
-                        <p style={{gridColumnStart: 'span 2'}}>Email: ooiwh0907@gmail.com</p>
-                    </div>
-                    </Grid>
-                </Grid>
-                </Box>
-        </section>
+        <section id="about">
+        <div className='row'></div>
+        <h2 style={{ color: '#31F400', padding: '20px', paddingBottom: '1px',borderBottom: '2px solid white', marginBottom:'20px' }}>About Me</h2>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img style={{ width: '250px', height: '350px' }} src={whpic}  alt="Profile" />
+          </Grid>
+          <Grid item xs={12} md={6} style={{ color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' }}>
+            <p style={{ fontSize: '24px' }}>Ooi Wei Heng</p>
+            <p style={{ fontSize: '20px' }}>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px'}}>
+              <p>Birthday: 07 September 2001</p>
+              <p>Nationality: Malaysian</p>
+              <p>Phone Numbers: +65xxxxxxxx / +60187899958</p>
+              <p>Email: ooiwh0907@gmail.com</p>
+            </div>
+          </Grid>
+        </Grid>
+      </section>
     );
 }
 

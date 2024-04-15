@@ -13,42 +13,41 @@ function Skillset(){
 
     return(
         <section id="skillset">
-            <h2 style={{display:'flex', justifyContent: 'center', textDecoration: 'underline', textDecorationColor: 'white', padding: '20px'}}>Skillsets</h2>
-            <div style={{display:'flex', justifyContent:'Center', background:"rgba(66,253,0,0.5)", borderRadius:"50px", padding: '25px'}}>
+            <h2 className='section-heading'>Skillsets</h2>
+            <div className='skillset-container'>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2} minHeight={160}>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaPython style={{color:'#4584B6',width:' 100px', height:'100px'}} /></Avatar> 
-                    </Grid>
-                    <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><IoLogoJavascript style={{color:'yellow', width:' 100px', height:'100px'}} /></Avatar> 
-                    </Grid>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaNode  style={{width:' 100px', height:'100px'}} /></Avatar> 
-                    </Grid>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaReact style={{width:' 100px', height:'100px'}} /></Avatar> 
-                    </Grid>
-                    <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaWordpress style={{width:' 100px', height:'100px'}} /></Avatar> 
-                    </Grid>
-
+                <Grid container spacing={2} justifyContent="space-evenly" minHeight={160}>
+                <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                    <Avatar sx={{width: 125, height: 125}}><FaPython style={{color:'#4584B6',width:' 80%', height:'80%'}} /></Avatar> 
                 </Grid>
-                <Grid container spacing={2} minHeight={160}>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaHtml5 style={{width:' 100px', height:'100px'}} /></Avatar> 
+                <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                    <Avatar sx={{width: 125, height: 125}}><IoLogoJavascript style={{color:'yellow', width:' 80%', height:'80%'}} /></Avatar> 
+                </Grid>
+                <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                    <Avatar sx={{width: 125, height: 125}}><FaNode  style={{width:' 80%', height:'80%'}} /></Avatar> 
+                </Grid>
+                <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                    <Avatar sx={{width: 125, height: 125}}><FaReact style={{width:' 80%', height:'80%'}} /></Avatar> 
+                </Grid>
+                <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                    <Avatar sx={{width: 125, height: 125}}><FaWordpress style={{width:' 80%', height:'80%'}} /></Avatar> 
+                </Grid>
+                </Grid>
+                <Grid container spacing={2} justifyContent="space-evenly" minHeight={160}>
+                    <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                        <Avatar sx={{width: 125, height: 125}}><FaHtml5 style={{width:' 80%', height:'80%'}} /></Avatar> 
                     </Grid>
-                    <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><FaCss3Alt style={{color:'blue',width:' 100px', height:'100px'}} /></Avatar> 
+                    <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                        <Avatar sx={{width: 125, height: 125}}><FaCss3Alt style={{color:'blue',width:' 80%', height:'80%'}} /></Avatar> 
                     </Grid>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><TbApi style={{width:' 100px', height:'100px'}} /></Avatar> 
+                    <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                        <Avatar sx={{width: 125, height: 125}}><TbApi style={{width:' 80%', height:'80%'}} /></Avatar> 
                     </Grid>
-                    <Grid xs display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><SiPostgresql style={{width:' 100px', height:'100px'}} /></Avatar> 
+                    <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                        <Avatar sx={{width: 125, height: 125}}><SiPostgresql style={{width:' 80%', height:'80%'}} /></Avatar> 
                     </Grid>
-                    <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Avatar sx={{ width: 125, height: 125 }}><SiMysql  style={{width:' 100px', height:'100px'}} /></Avatar> 
+                    <Grid item xs={6} sm={3} md={2} className="avatar-container">
+                        <Avatar sx={{width: 125, height: 125}}><SiMysql  style={{width:' 80%', height:'80%'}} /></Avatar> 
                     </Grid>
                 </Grid>
             </Box>

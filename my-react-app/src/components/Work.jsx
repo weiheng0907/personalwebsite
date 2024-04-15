@@ -9,14 +9,14 @@ function Work(){
 
     return(
         <section id="work">
-            <h2 style={{display:'flex', justifyContent: 'center', textDecoration: 'underline', textDecorationColor: 'white', padding: '20px'}}>Work Experience</h2>
-                <VerticalTimeline lineColor='black'>
+            <h2 style={{ display: 'flex', color: '#31F400', borderBottom: '2px solid white', padding: '20px', paddingBottom: '1px', marginBottom:'20px'}}>Work Experience</h2>
+                <VerticalTimeline lineColor='#31F400'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'rgb(33, 150, 243)', color: 'black' }}
-                        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                        contentStyle={{ background: '#B2C6AC', color: '#000000'}}
+                        contentArrowStyle={{ borderRight: '7px solid  #31F400' }}
                         date="July 2022 - Feb 2024"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                        iconStyle={{ background: '#31F400', color: '#fff' }}
                         
                     >
                         <h3 className="vertical-timeline-element-title">Project Manager & Product Specialist</h3>
@@ -30,9 +30,9 @@ function Work(){
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'rgb(33, 150, 243)', color: 'black' }}
+                        contentStyle={{ background: '#B2C6AC', color: '#000000' }}
                         date="October 2020 – August 2021"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                        iconStyle={{ background: '#31F400', color: '#000' }}
                         
                     >
                         <h3 className="vertical-timeline-element-title">Store Manager</h3>
@@ -45,9 +45,9 @@ function Work(){
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'rgb(33, 150, 243)', color: 'black' }}
+                        contentStyle={{ background: '#B2C6AC', color: '#000000'}}
                         date="Jan 2020 – March 2020"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                        iconStyle={{ background: '#31F400', color: '#fff' }}
                         
                     >
                         <h3 className="vertical-timeline-element-title">Wholesale & Retail Business Owner</h3>
@@ -59,7 +59,7 @@ function Work(){
                         </ul>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
-                        iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                        iconStyle={{ background: 'red', color: '#fff' }}
                         icon={<CloseIcon />}
                     />
                 </VerticalTimeline>
