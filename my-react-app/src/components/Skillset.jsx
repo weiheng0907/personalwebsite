@@ -12,6 +12,9 @@ function Skillset(){
 
 
     return(
+
+
+        
         <section id="skillset">
             <h2 className='section-heading'>Skillsets</h2>
             <div className='skillset-container'>

@@ -2,11 +2,11 @@ import React from 'react';
 
 
 
-function Portfolio(){
+function Education(){
 
 
     return(
-        <section id="portfolio">
+        <section id="education">
             <h2 style={{ display: 'flex', color: '#31F400', borderBottom: '2px solid white', padding: '20px', paddingBottom: '1px', marginBottom:'20px'}}>Education</h2>
             <div style={{display:'flex', flexDirection:'column', justifyContent:'space-evenly'}}>
                 <div className='container'>
@@ -43,4 +43,4 @@ function Portfolio(){
 
 
 
-export default Portfolio;
+export default Education;

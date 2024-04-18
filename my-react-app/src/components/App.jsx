@@ -2,28 +2,28 @@ import React, { useEffect } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import About from './About';
-import Portfolio from './Portfolio';
 import Work from './Work';
 import Skillset from './Skillset';
 import Contact from './Contact';
+import Education from './Education';
+import Footer from './Footer';
 
 function App() {
 
   useEffect(() => {
-    // Initialising the canvas
     var canvas = document.getElementById('heroCanvas'),
         ctx = canvas.getContext('2d');
 
-    // Setting the width and height of the canvas
+    // width and height of the canvas
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Setting up the letters
+    // the letters
     var letters = '100111011101010010101010101010010110011101110101001010101010101001010111111111111111000000000010011101110101001010101010101001010111111111111111000000000000111111111111111000000000000000001111111111111110000000000000000111111111111111000000000000111111111111111000000000000000';
     letters = letters.split('');
 
     // Setting up the columns
-    var fontSize = 16,
+    var fontSize = 13,
         columns = canvas.width / fontSize;
 
     // Setting up the drops
@@ -58,10 +58,11 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Portfolio />
+      <Education />
       <Work />
       <Skillset />
       <Contact />
+      <Footer />
     </div>
   );
 }

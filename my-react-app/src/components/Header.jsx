@@ -19,8 +19,11 @@ function Header() {
           <li className={activeSection === 'about' ? 'active' : ''}>
             <button onClick={() => handleButtonClick('about')}>About</button>
           </li>
-          <li className={activeSection === 'portfolio' ? 'active' : ''}>
-            <button onClick={() => handleButtonClick('portfolio')}>Portfolio</button>
+          <li className={activeSection === 'education' ? 'active' : ''}>
+            <button onClick={() => handleButtonClick('education')}>Education</button>
+          </li>
+          <li className={activeSection === 'work' ? 'active' : ''}>
+            <button onClick={() => handleButtonClick('work')}>Work Exp</button>
           </li>
           <li className={activeSection === 'skillset' ? 'active' : ''}>
             <button onClick={() => handleButtonClick('skillset')}>Skillsets</button>

@@ -32,9 +32,9 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-  color: #ffc107; 
+  color: #31F400; 
 }
 
 nav ul li.active button {
-  color: #ffc107; 
+  color: #31F400; 
 }

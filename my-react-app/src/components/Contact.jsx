@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,20 +8,40 @@ const Contact = () => {
     message: ''
   });
 
+  const [emailSent, setEmailSent] = useState(false);
+
+  const serviceId ='service_13iwpry';
+  const templateId = 'template_ybn1cx9';
+  const publicKey = 'ixvW971hfDVU-8jQ8'; //should use gitignore method to hide the public key, will do on next version
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    
+    emailjs.sendForm(serviceId, templateId, e.target, publicKey)
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setEmailSent(true);
+        // after sent the email reset the form data
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error('Email sending failed:', error);
+      });
   };
 
   return (
     <section id='contact' className='row'>
       <div className='col-md-12' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <form onSubmit={handleSubmit} style={{ width: '80%', maxWidth: '750px', background: 'rgba(66, 253, 0, 0.5)', padding: '30px', borderRadius: '10px', boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.2)' }}>
-          <h2 className='section-heading' style={{ marginBottom: '20px', textAlign: 'center', color:'White', fontWeight:'bold' }}>Contact Me</h2>
+      <form onSubmit={handleSubmit} className='contact-form'>
+        <h2 className='section-heading'>Contact Me</h2>
           <div className="form-group">
             <input
               placeholder="Name"
@@ -29,7 +50,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              style={{ width: '100%', padding: '10px', marginBottom: '15px', background:'#B2C6AC',borderRadius: '5px', border: 'none', boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.1)' }}
+              className='contact-field'
               required
             />
           </div>
@@ -41,7 +62,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              style={{ width: '100%', padding: '10px', marginBottom: '15px', background:'#B2C6AC', borderRadius: '5px', border: 'none', boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.1)' }}
+              className='contact-field'
               required
             />
           </div>
@@ -52,13 +73,14 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              style={{ width: '100%', padding: '10px', background:'#B2C6AC', marginBottom: '20px', borderRadius: '5px', border: 'none', boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.1)' }}
+              className='contact-field'
               rows={5}
               required
             ></textarea>
           </div>
-          <button type="submit" className="submit-button" style={{ width: '100%', padding: '10px', borderRadius: '5px', border: 'none',transition: 'background 0.3s, color 0.3s', background: 'black', color: 'white', cursor: 'pointer' }}>Submit</button>
+          <button type="submit" className="submit-button">Submit</button>
         </form>
+        {emailSent && <p className='success-message'>Email sent successfully!</p>}
       </div>
     </section>
   );
