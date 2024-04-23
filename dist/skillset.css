@@ -9,8 +9,8 @@
     }
 
 .section-heading {
+    color: #31F400 !important;
     display: flex;
-    color: #31F400;
     border-bottom: 2px solid white;
     padding: 20px;
     padding-bottom: 1px;
