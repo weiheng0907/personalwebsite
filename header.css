@@ -6,20 +6,20 @@ header {
   z-index: 1000;
 }
 
-
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 nav ul li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -32,9 +32,69 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-  color: #31F400; 
+  color: #31f400;
 }
 
 nav ul li.active button {
-  color: #31F400; 
+  color: #31f400;
+}
+
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+
+
+@media (max-width: 480px) {
+  header {
+    background-color: #333;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
 }
